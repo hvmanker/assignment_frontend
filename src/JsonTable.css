@@ -1,0 +1,90 @@
+/* JsonTable.css */
+.json-table-container {
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .json-table-section {
+    margin-bottom: 30px;
+  }
+  
+ .table-container
+ {
+  margin-top: 30px;
+ }
+  
+  
+  
+  
+.key-column {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px; /* Adjust as needed */
+   } 
+  
+ 
+
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    height: 100%; /* Make cards equal height to create squares */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Vertically align content */
+  }
+  
+  .card-header {
+    font-weight: bold;
+    background-color: #f2f2f2;
+    padding: 8px;
+    text-align: center; /* Center-align text */
+  }
+  
+  .card-body {
+    padding: 8px;
+    text-align: center; /* Center-align text */
+  }
+  
+  .green-tick {
+    color: green;
+    font-size: 20px;
+  }
+  
+  .red-cross {
+    color: red;
+    font-size: 20px;
+  }
+  
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 20px;
+    }
+  
+    table th,
+    table td {
+      padding: 8px;
+    }
+    .key-column {
+        max-width: 100px;
+    }
+    .card-container {
+      grid-template-columns: repeat(2, 1fr); /* 1 column for mobile */
+    }
+  }

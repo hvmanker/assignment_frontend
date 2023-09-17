@@ -1,0 +1,56 @@
+/* Container styles */
+.Seowidget {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Header styles */
+.Seowidget h1 {
+  color: #000000;
+}
+
+/* Input styles */
+.Seowidget .Seowidget-input[type="text"] {
+  width: calc(100% - 40px); /* Adjust the width and add 20px margin on each side */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 0 15px; /* Add margin to the left and right */
+}
+
+/* Button styles */
+.Seowidget button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 30px;
+}
+
+/* Result table styles */
+.Seowidget .result-table {
+  margin-top: 20px;
+}
+
+/* Spinner styles */
+.Seowidget .spinner {
+  border: 6px solid rgba(0, 0, 0, 0.3);
+  border-top: 6px solid #007bff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 20px auto 0; /* Push the spinner down by adding margin-top */
+  animation: spin 1s linear infinite;
+}
+
+/* Add a loading class to style the container when loading */
+.Seowidget.loading {
+  background-color: #fff;
+  opacity: 0.7;
+}

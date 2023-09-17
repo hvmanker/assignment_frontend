@@ -1,0 +1,51 @@
+/* JsonTable.css */
+
+/* ... Existing CSS styles ... */
+
+.table-containerother
+{
+  margin-top: 10px;
+}
+.card-containerother {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+}
+
+.cardother {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 348px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-headerother {
+  font-weight: bold;
+  background-color: #f2f2f2;
+  padding: 8px;
+  text-align: center;
+}
+
+.card-bodyother {
+  padding: 3px;
+  text-align: center;
+  overflow-wrap: break-word; /* Allow content to wrap to the next line */
+  overflow: hidden;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 790px) {
+  .card-containerother {
+    grid-template-columns: repeat(2, 1fr); /* 1 column for mobile */
+  }
+}
+
+@media (max-width: 386px) {
+  .card-containerother {
+    grid-template-columns: repeat(1, 1fr); /* 1 column for mobile */
+  }
+}
+

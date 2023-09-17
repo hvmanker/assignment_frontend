@@ -1,0 +1,14 @@
+/* ProgressBar.css */
+.circular-progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Set the width to 100% for responsiveness */
+  padding: 10px; /* Add some padding for spacing */
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.circular-progress-bar {
+  display: inline-block; /* Use inline-block to make the progress bar appear inline with block-level properties */
+  max-width: 100%; /* Ensure the progress bar doesn't exceed its container */
+}
