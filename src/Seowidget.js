@@ -18,7 +18,7 @@ const Seowidget = () =>
     setIsLoading(true);
   
     axios
-      .post("http://localhost:3000/send-request", {
+      .post("https://assignmentapi-production.up.railway.app/send-request", {
         url,
       })
       .then((response) => {
