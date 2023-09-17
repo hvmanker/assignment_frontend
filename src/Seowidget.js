@@ -3,30 +3,48 @@ import JsonTable from "./JsonTable"; // Import the JsonTable component
 import axios from "axios";
 import "./Seowidget.css";
 
-const Seowidget = () => {
+const Seowidget = () => 
+{
   const [url, setUrl] = useState("");
   const [result, setResult] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  const fetchDataForSEO = async () => {
-    try {
-      if (url.trim() === "") {
-        alert("Please enter a URL");
-        return;
-      }
-
-      setIsLoading(true);
-
-      const response = await axios.post("https://assignmentapi-production.up.railway.app/send-request", {
-        url,
-      });
-      setResult(response.data);
-    } catch (error) {
-      console.error("Error fetching DataForSEO data", error);
-    } finally {
-      setIsLoading(false);
+  const fetchDataForSEO = () => {
+    if (url.trim() === "") {
+      alert("Please enter a URL");
+      return;
     }
+  
+    setIsLoading(true);
+  
+    axios
+      .post("http://localhost:3000/send-request", {
+        url,
+      })
+      .then((response) => {
+        console.log(response.data.error);
+        if (response.data.success) {
+          setResult(response.data);
+        } else {
+          // Check if the response indicates an invalid URL
+          if (response.data.error === "Invalid URL") {
+            // Prompt the user with an error message
+            alert("Invalid URL. Please enter a valid URL.");
+          } else {
+            // Handle other error conditions if needed
+            console.error("Error fetching DataForSEO data:", response.data.error);
+          }
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching DataForSEO data", error);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
+  
+  
 
   // Handle "Enter" key press
   const handleEnterKey = (e) => {
