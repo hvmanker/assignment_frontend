@@ -28,10 +28,10 @@ const Seowidget = () =>
         } else {
           // Check if the response indicates an invalid URL
           if (response.data.error === "Invalid URL") {
-            // Prompt the user with an error message
+            setResult(null);
             alert("Invalid URL. Please enter a valid URL.");
           } else {
-            // Handle other error conditions if needed
+            setResult(null);
             console.error("Error fetching DataForSEO data:", response.data.error);
           }
         }
