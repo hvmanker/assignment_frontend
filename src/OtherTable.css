@@ -10,10 +10,11 @@
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+  background-color: #e5e5e5;
 }
 
 .cardother {
-  border: 1px solid #ddd;
+  border: 1px solid #000000;
   border-radius: 4px;
   width: 348px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -24,7 +25,7 @@
 
 .card-headerother {
   font-weight: bold;
-  background-color: #f2f2f2;
+  background-color: #e5e5e5;
   padding: 8px;
   text-align: center;
 }
@@ -52,5 +53,4 @@
     width: 100%;
   }
 }
-
 
