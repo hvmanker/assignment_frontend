@@ -41,6 +41,7 @@ const Seowidget = () =>
       })
       .finally(() => {
         setIsLoading(false);
+        setUrl("");
       });
   };
   
