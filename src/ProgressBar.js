@@ -24,7 +24,7 @@ const CircularProgressBar = ({ score }) => {
           styles={buildStyles({
             textColor: pathColor, // Use the determined color for the text
             pathColor: pathColor, // Use the determined color for the progress path
-            trailColor: "#f0f0f0", // Color for the trail (background)
+            trailColor: "#e5e5e5", // Color for the trail (background)
             textSize: "14px", // Size of the text
           })}
         />
