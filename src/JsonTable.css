@@ -36,11 +36,13 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
     grid-gap: 20px;
+    background-color: #e5e5e5;
   }
   
   .card {
-    border: 1px solid #ddd;
+    border: 1px solid rgb(214, 214, 214);
     border-radius: 4px;
+    border-color: black;
     padding: 10px;
     height: 100%; /* Make cards equal height to create squares */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -51,7 +53,7 @@
   
   .card-header {
     font-weight: bold;
-    background-color: #f2f2f2;
+    background-color: #e5e5e5;
     padding: 8px;
     text-align: center; /* Center-align text */
   }
